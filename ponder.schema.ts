@@ -1,8 +1,9 @@
+import { createBookadotFactorySchema } from './src/bookadot-factory/bookadot-factory.schema';
 import { createSchema } from "@ponder/core";
 
-export default createSchema((p) => ({
-  Account: p.createTable({
-    id: p.hex(),
-    balance: p.bigint(),
-  }),
-}));
+const ponderSchema = (p: P) => Object.assign({},
+  // createWeth9Schema(p),
+  createBookadotFactorySchema(p),
+);
+// @ts-ignore
+export default createSchema(ponderSchema);
