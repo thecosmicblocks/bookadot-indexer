@@ -7,7 +7,7 @@
     "start": "ponder start",
     "codegen": "ponder codegen",
     "serve": "ponder serve",
-    "lint": "eslint .",
+    "lint": "eslint '*/**/*.{js,ts}' --fix",
     "typecheck": "tsc"
   },
   "dependencies": {
